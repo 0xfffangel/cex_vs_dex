@@ -1,0 +1,2 @@
+ccxt
+git+https://github.com/0xfffangel/multidex-python.git#egg=multidex
