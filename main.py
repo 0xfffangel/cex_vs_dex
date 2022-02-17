@@ -1,5 +1,5 @@
 import asyncio
-from multidex import Stellaswap, Uniswap, Spookyswap, Pancakeswap
+import multidex
 import ccxt.async_support as ccxt
 import argparse
 
@@ -19,13 +19,15 @@ def get_exchange(exchange):
 
 def get_dex(dex):
     if dex == 'stellaswap':
-        return Stellaswap()
+        return multidex.Stellaswap()
     elif dex == 'uniswap':
-        return Uniswap()
+        return multidex.Uniswap()
     elif dex == 'spookyswap':
-        return Spookyswap()
+        return multidex.Spookyswap()
     elif dex == 'pancakeswap':
-        return Pancakeswap()
+        return multidex.Pancakeswap()
+    elif dex == 'beamswap':
+        return multidex.Beamswap()
     else:
         raise Exception("Dex not supported")
 
