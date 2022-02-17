@@ -46,12 +46,15 @@ async def main():
     ticker = await exchange.fetch_ticker(args.pair)
     print(args.exchange, " ask: ", ticker["ask"])
     print(args.exchange, " bid: ", ticker["bid"])
+    print(args.exchange, " askVolume: ", ticker["askVolume"])
+    print(args.exchange, " bidVolume: ", ticker["bidVolume"])
     print(args.exchange, " last: ", ticker["last"])
     await exchange.close()
 
     dex = get_dex(args.dex)
     print(args.dex, " reserve_ratio: ", dex.reserve_ratio(args.token))
     print(args.dex, " price: ", dex.price(args.token))
+    print(args.dex, " liquidity: ", dex.liquidity(args.token))
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
