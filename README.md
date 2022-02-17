@@ -1,4 +1,4 @@
-SpreadBot
+CEX vs DEX
 ===
 
 Python price bot for a single pair on CEX (=exchanges) and DEX (=swaps).
